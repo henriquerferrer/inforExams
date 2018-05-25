@@ -38,7 +38,6 @@
 <button id="spotButton"  type="button">Take me to a magic place!</button>
 
   <h1><td><%= @randomSpot.name %></td></h1>
-  <h1><td><%= @randomSpot.lat %></td></h1>
   </br>
 
 
@@ -65,3 +64,24 @@
         });
       })
 </script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript">
+
+handler = Gmaps.build('Google');
+        x = navigator.geolocation;
+        x.getCurrentPosition(success);
+        function success(position){
+          handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+            markers = handler.addMarkers([
+              {
+                "lat": position.coords.latitude,
+                "lng": position.coords.longitude,
+                "infowindow": "hello!"
+              }
+            ]);
+            handler.bounds.extendWith(markers);
+            handler.fitMapToBounds();
+          });
+        }
+</script>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
