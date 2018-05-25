@@ -21,6 +21,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
+#googlemaps gem
+gem 'google_places'
 gem 'devise-bootstrap-views'
 gem 'mechanize'
 gem 'geocoder'

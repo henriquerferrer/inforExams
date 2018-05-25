@@ -36,6 +36,11 @@
 
 <br>
 
+
+  <h1><td><%= @randomSpot.name %></td></h1>
+  </br>
+
+
 <%= link_to 'New Place', new_place_path %>
 
 <div style='width: 800px;'>
@@ -49,7 +54,6 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     {
       "lat": 40.191327,
       "lng": -8.4136871,
-      "zoom": 10,
       "infowindow": "hello!"
     }
   ]);
