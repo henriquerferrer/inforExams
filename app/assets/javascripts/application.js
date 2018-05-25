@@ -14,4 +14,7 @@
 //= require jquery
 //=require twitter/bootstrap
 //= require turbolinks
+//= require markerclusterer
+//= require underscore
+//= require gmaps/google
 //= require_tree .
