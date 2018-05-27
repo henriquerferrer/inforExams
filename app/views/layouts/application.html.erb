@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "GitHulp" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "randomPlaces" %></title>
     <%= csrf_meta_tags %>
 
 
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyCls-2rt1kBGBc76pv-Vhr4LJIVH-wxkTs&callback=initMap"></script>
+    <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -25,7 +30,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">GitHulp</a>
+        <a class="navbar-brand" href="#">randomPlaces</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Link1", "/path1"  %></li>
