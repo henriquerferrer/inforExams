@@ -30,14 +30,15 @@
   </tbody>
 </table>
 
-<br>
+</br>
 <button id="spotButton"  type="button">Take me to a magic place!</button>
 
+</br>
 <%= link_to 'New Place', new_place_path %>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
+</br>
+<%= render 'map'%>
 
+</br>
 
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
