@@ -8,7 +8,6 @@ class PlacesController < ApplicationController
     spots = @client.spots(40.191327, -8.4136871, radius: 1000, types: 'restaurant')
     @randomSpot = spots[rand(spots.length)]
     @places = Place.all
-
   end
 
   # GET /places/1
