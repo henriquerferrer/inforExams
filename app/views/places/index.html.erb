@@ -31,13 +31,15 @@
 </table>
 
 <br>
-<button id="spotButton"  type="button">Take me to a magic place!</button>
+
+<div id="place-name"></div>
 
 <%= link_to 'New Place', new_place_path %>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
+<%= button_to "SpotButton", "...", id: 'spotButton', remote: true, method: :get %>
 
+<div id="result">
+  <%= render 'places/map'%>
+  </div>
 
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>

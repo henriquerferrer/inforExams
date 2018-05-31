@@ -4,8 +4,16 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @client = GooglePlaces::Client.new("AIzaSyCVcuPwW5vDnPwhBMVvf322lmGcZwqtCeY")
     @places = Place.all
+    @client = GooglePlaces::Client.new("AIzaSyCVcuPwW5vDnPwhBMVvf322lmGcZwqtCeY")
+    spots = @client.spots(40.191327, -8.4136871, radius: 1000, types: 'restaurant')
+    respond_to do |format|
+      format.js { @randomSpot = spots[rand(spots.length)] }
+    end
+  end
+ 
+  def randomize
+    
   end
 
   # GET /places/1
