@@ -30,9 +30,12 @@
   </tbody>
 </table>
 
-<br>
+
+</br>
 
 <div id="place-name"></div>
+
+</br>
 
 <%= link_to 'New Place', new_place_path %>
 
@@ -40,6 +43,6 @@
 
 <div id="result">
   <%= render 'places/map'%>
-  </div>
+</div>
 
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
