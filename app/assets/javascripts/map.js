@@ -17,8 +17,7 @@ $(window).load(function() {
   }
 });
 
-
-$("#spotButton").click(function(){
+$(window).load(function(){
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers([

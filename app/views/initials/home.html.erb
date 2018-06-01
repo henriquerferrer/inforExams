@@ -1,1 +1,11 @@
+<div id="place-name"></div>
+
+</br>
+
+<%= button_to "SpotButton", randomize_path, id: 'spotButton', remote: true, method: :get %>
+
+<div id="result">
+  <%= render 'maps/map'%>
+</div>
+
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>

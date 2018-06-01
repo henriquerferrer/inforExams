@@ -1,0 +1,2 @@
+$("#place-name").append("<h1><%= j @randomSpot.name %></h1>")
+$("#result").html("<%= j (render 'maps/map.html') %>").trigger('show');

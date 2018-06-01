@@ -30,19 +30,4 @@
   </tbody>
 </table>
 
-
-</br>
-
-<div id="place-name"></div>
-
-</br>
-
 <%= link_to 'New Place', new_place_path %>
-
-<%= button_to "SpotButton", "...", id: 'spotButton', remote: true, method: :get %>
-
-<div id="result">
-  <%= render 'places/map'%>
-</div>
-
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
