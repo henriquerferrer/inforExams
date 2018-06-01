@@ -141,6 +141,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
+    pg (1.0.0)
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
@@ -258,6 +259,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   markerclustererplus-rails
   mechanize
+  pg
   puma (~> 3.7)
   rails (~> 5.1.6)
   sass-rails (~> 5.0)
