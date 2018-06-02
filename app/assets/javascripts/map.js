@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(document).ready(function() {
   handler = Gmaps.build('Google');
   x = navigator.geolocation;
   x.getCurrentPosition(success);
