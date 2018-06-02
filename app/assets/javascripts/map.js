@@ -14,6 +14,8 @@ $(window).load(function() {
       handler.bounds.extendWith(markers);
       handler.map.centerOn({ lat: position.coords.latitude, lng: position.coords.longitude })
     });
+    $("#place-lat").html(position.coords.latitude)
+    $("#place-lng").html(position.coords.longitude)
   }
 });
 
@@ -34,3 +36,15 @@ $(document).ready(function(){
     });
   });
 });
+
+function randomize(){
+  x = navigator.geolocation;
+  x.getCurrentPosition(success);
+  function success(position){
+    var latitude = position.coords.latitude
+    var longitude = position.coords.longitude
+    $.ajax({
+        url: "randomize/?latitude="+latitude+"&longitude="+longitude,
+    });
+  }
+}

@@ -1,8 +1,13 @@
 <div id="place-name"></div>
 
+<div id="place-lat"></div>
+<div id="place-lng"></div>
+
 </br>
 
-<%= button_to "SpotButton", randomize_path, id: 'spotButton', remote: true, method: :get %>
+<div id="button">
+  <%= button_tag "SpotButton", type: 'button', onclick: "randomize()", id: 'spotButton' %>
+</div>
 
 <div id="result">
   <%= render 'maps/map'%>
