@@ -38,13 +38,22 @@ $(document).ready(function(){
 });
 
 function randomize(){
+  var meters = document.getElementById("meters").value;
+  meters = meters*1000
+  types = [];
+  $("input:checkbox[name=type]:checked").each(function(){
+    types.push($(this).val());
+  });
+  console.log(types)
   x = navigator.geolocation;
   x.getCurrentPosition(success);
   function success(position){
     var latitude = position.coords.latitude
     var longitude = position.coords.longitude
     $.ajax({
-        url: "randomize/?latitude="+latitude+"&longitude="+longitude,
+        type: 'GET',
+        url: "randomize",
+        data: {latitude: latitude, longitude: longitude, meters: meters, types: types}
     });
   }
 }

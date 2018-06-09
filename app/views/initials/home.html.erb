@@ -5,8 +5,17 @@
 
 </br>
 
+  <input type="number" id="meters", autofocus, placeholder="distância in km">
+  </br>
+  <label class="checkbox-inline"><input type="checkbox" name="type" value="restaurant">Restaurant</label>
+  <label class="checkbox-inline"><input type="checkbox" name="type" value="bar">Bar</label>
+  <label class="checkbox-inline"><input type="checkbox" name="type" value="night_club">night_club</label>
+  <label class="checkbox-inline"><input type="checkbox" name="type" value="meal_takeaway">Takeaway</label>
+
+
+
 <div id="button">
-  <%= button_tag "SpotButton", type: 'button', onclick: "randomize()", id: 'spotButton' %>
+  <button type="submit" class="btn btn-default spotButton", onclick="randomize()">Submit</button>
 </div>
 
 <div id="result">
